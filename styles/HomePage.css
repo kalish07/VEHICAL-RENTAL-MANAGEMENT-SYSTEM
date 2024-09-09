@@ -1,0 +1,93 @@
+/* Overall Page Styling */
+.homepage, .MuiAppBar-root, .MuiToolbar-root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.MuiAppBar-root { background-color: #111; }
+.MuiToolbar-root { padding: 0 20px; }
+.MuiTypography-h6, .MuiIconButton-root, .MuiButton-root { color: #fff; }
+.MuiButton-root { margin: 0 10px; }
+
+/* Hero Section */
+.hero {
+  background: url('https://images.pexels.com/photos/97079/pexels-photo-97079.jpeg') center / cover no-repeat;
+  height: 500px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: -1;
+}
+
+.hero h2 { font-weight: bold; margin-bottom: 16px; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); }
+.hero h6 { margin-bottom: 24px; font-size: 1.5rem; color: #ccc; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); }
+.hero button { padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); position: relative; z-index: 2; }
+
+/* Booking Section */
+.booking-section {
+  padding: 40px;
+  text-align: center;
+  background-color: #0d0d0d;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.booking-section h4 { margin-bottom: 16px; font-size: 2rem; font-weight: bold; }
+.booking-section p { margin-bottom: 32px; font-size: 1.2rem; }
+.booking-form-container { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+
+.booking-section .MuiTextField-root {
+  width: 100%; max-width: 300px; background-color: #b0b0b0; border-radius: 4px;
+}
+
+.booking-section .MuiTextField-root input { color: #333; }
+.booking-section .MuiButton-root {
+  background-color: #ff5722; color: #fff; border-radius: 4px; padding: 10px 20px; font-size: 1rem;
+}
+
+.booking-section .MuiButton-root:hover { background-color: #e64a19; }
+
+/* Section Styling */
+.why-choose-us, .how-it-works {
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(10, 10, 10, 0.95));
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.why-choose-us h4, .how-it-works h4 { margin-bottom: 16px; font-size: 2rem; font-weight: bold; }
+.why-choose-us p, .how-it-works p { margin-bottom: 32px; font-size: 1.2rem; color: #ccc; }
+
+.why-choose-us .MuiCard-root, .how-it-works .MuiCard-root {
+  background-color: #111; color: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.why-choose-us .MuiCardMedia-root, .how-it-works .MuiCardMedia-root { filter: brightness(60%); }
+.why-choose-us .MuiCardContent-root, .how-it-works .MuiCardContent-root { color: #ccc; }
+.why-choose-us .MuiTypography-h5, .how-it-works .MuiTypography-h5 { font-size: 1.5rem; margin-bottom: 10px; font-weight: bold; }
+.why-choose-us .MuiTypography-body2, .how-it-works .MuiTypography-body2 { font-size: 1rem; }
+
+/* Card Styling */
+.card { background-color: #111; color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); }
+.card img { border-bottom: 1px solid #333; }
+.card .MuiTypography-body2 { color: #ccc; }
+
+@media (max-width: 600px) { .hero { height: 400px; } }
